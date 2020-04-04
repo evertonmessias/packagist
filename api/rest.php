@@ -1,19 +1,18 @@
 <?php
+namespace api;
 header('Content-Type: application/json; charset=utf-8');
-
-require_once 'classes/pessoas.php';
 
 class Rest
 {
 	public static function open($req)
 	{
 		if ($req == null) {
-			return json_encode(array('status' => 'erro', 'dados' => 'URL Vazia!'));
+			return json_encode(array('status' => 'sucesso', 'dados' => 'Pagina inicial!'));
 		} else {
 			$url = explode('/', $req['url']);
-			if (count($url) <= 2) {
+			if (count($url) == 2) {
 
-				$classe = ucfirst($url[0]);
+				$classe = "api\\".ucfirst($url[0]);			
 				$metodo = $url[1];
 
 				if (class_exists($classe)) {
