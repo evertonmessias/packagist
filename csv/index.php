@@ -4,4 +4,3 @@ include './vendor/autoload.php';
 
 var_dump(Pessoas::consultar());
 
-
