@@ -1,22 +1,16 @@
 <?php
 namespace api;
 
-use League\Csv\Writer;
-
 include './vendor/autoload.php';
+
+use League\Csv\Writer;
 
 $csv = Writer::createFromString("");
 
-$csv->insertOne([
-    "Nome",
-    "Telefone",
-    "E-Mail"
-]);
+$csv->insertOne(["Nome","Telefone","E-Mail"]);
 
 foreach(Pessoas::consultar() as $dado){
-    $csv->insertOne([
-        $dado[1],$dado[2],$dado[3]
-    ]);
+    $csv->insertOne([$dado[1],$dado[2],$dado[3]]);
 }
 
 $csv->output('saida.csv');
