@@ -1,0 +1,20 @@
+{
+    "name": "evertonmessias/packagist",
+    "description": "Testes com Packagist",
+    "require": {
+        "league/oauth2-google": "^3.0"
+    },
+    "authors": [
+        {
+            "name": "evertonmessias",
+            "email": "everton.messias@gmail.com"
+        }        
+    ],
+    "autoload": {
+        "psr-4":{
+            "App\\":"App/"
+        },
+        "files": ["./app/config.php"]
+    }
+
+}

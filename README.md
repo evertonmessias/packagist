@@ -1,2 +1,2 @@
-# api_rest
-Exemplo de uso API REST com retorno JSON
+# PACKAGIST
+Exemplo de uso de alguns PACOTES
