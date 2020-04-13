@@ -4,7 +4,7 @@ namespace api;
 	{
 		public function consultar()
 		{
-			$con = new \PDO('mysql: host=locahost; dbname=teste;','root','efc2505xx');
+			$con = new \PDO('mysql: host=locahost; dbname=testephp;','root','');
 
 			$sql = "SELECT * FROM pessoas ORDER BY id ASC";
 			$sql = $con->query($sql);
